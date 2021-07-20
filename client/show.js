@@ -12,16 +12,34 @@ async function getPosts(){
     renderPosts(json.allPosts);
 }
 
-function renderPosts(postArray){   
-    postArray.forEach(e => {
-        let title = document.createElement('h3');
-        let pseudonym = document.createElement('h4');
-        let body = document.createElement('p');
-        title.textContent = e.title;
-        pseudonym.textContent = e.pseudonym;
-        body.textContent = e.body;
-        sectionToAppend.append(title);
-        sectionToAppend.append(pseudonym);
-        sectionToAppend.append(body);
-    })  
+function renderPosts(postArray){
+    //append in order of most recently added to db
+    postArray.reverse();
+    //append a maximum of 10 posts
+    let postsToLoop = postArray.slice(0,10);
+    //create a card for each post in db 
+    postsToLoop.forEach(e => {
+        let cardDiv = document.createElement('div');
+        cardDiv.classList.add('card');
+        cardDiv.classList.add('pt-3');
+        let cardHeader = document.createElement('div');
+        cardHeader.classList.add('card-header');
+        cardHeader.textContent = e.title;
+        let cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
+        let blockquote = document.createElement('blockquote');
+        blockquote.classList.add('blockquote');
+        blockquote.classList.add('mb-0');
+        let para = document.createElement('p');
+        para.textContent = e.body;
+        let footer = document.createElement('footer');
+        footer.classList.add('blockquote-footer');
+        footer.textContent = e.pseudonym;
+        blockquote.append(para);
+        blockquote.append(footer);
+        cardBody.append(blockquote);
+        cardDiv.append(cardHeader);
+        cardDiv.append(cardBody);
+        sectionToAppend.append(cardDiv);
+    })
 }
