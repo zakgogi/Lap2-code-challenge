@@ -19,6 +19,18 @@ class Post {
             }
         })
     }
+
+    static create(data){
+        return new Promise (async (resolve, reject) => {
+            try {
+                let postData = await db.query(`INSERT INTO posts (title, pseudonym, body) VALUES ($1, $2, $3) RETURNING *;`, [ data.title, data.pseudonym, data.body ]);
+                let newPost = new Post(postData.rows[0]);
+                resolve (newPost);
+            } catch (err) {
+                reject('Error creating dog');
+            }
+        });
+    }
 };
 
 module.exports = Post;
