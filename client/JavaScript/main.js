@@ -1,6 +1,6 @@
 let submitButton = document.getElementById('submitBtn');
 submitButton.addEventListener('click', sendData);
-let giphyButton = document.getElementById('giphSearch');
+let giphyButton = document.getElementById('gifSearch');
 giphyButton.addEventListener('click', searchGif);
 
 const API_KEY = "MjgWi5LAv7OcAlh9hzV3qtIF8G9eb4o3";
