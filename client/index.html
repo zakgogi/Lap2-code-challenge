@@ -7,21 +7,19 @@
     <title>Page</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <script defer src="./JavaScript/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Page</h1>
-    <form>
-        <input id="articleTitle" type="text" placeholder="title"> 
-        <br>
-        <br>
-        <input id="articlePseudonym" type="text" placeholder="pseudonym">
-        <br>
-        <br>
-        <label for="articleBody">Body:</label>
-        <br>  
-        <textarea id="articleBody"></textarea>
-        <br>
-        <input id="submitBtn" type="submit">
-    </form>   
+    <div>
+        <h1>POSTS</h1>
+        <form>
+            <input id="articleTitle" type="text" placeholder="Input your post title here...">
+            <input id="articlePseudonym" type="text" placeholder="Your pseudonym...">
+            <textarea id="articleBody" placeholder="Your post content..."></textarea>
+            <input id="submitBtn" type="submit" value="PUBLISH">
+        </form>
+    </div>
 </body>
 </html>
