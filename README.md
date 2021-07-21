@@ -22,10 +22,9 @@
 
 # Database Schema
 
-| Posts     |
 | --------- | ------------- | ------------------ |
-| id        |               | serial primary key |
-| pseudonym | varchar(255)  | Not Null           |
-| title     | varchar(100)  | Not Null           |
-| body      | varchar(1000) | Not Null           |
-| gif       | varchar(500)  |                    |
+| id | | serial primary key |
+| pseudonym | varchar(255) | Not Null |
+| title | varchar(100) | Not Null |
+| body | varchar(1000) | Not Null |
+| gif | varchar(500) | |
