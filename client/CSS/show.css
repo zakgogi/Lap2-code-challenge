@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.card-body p,
+.card-body footer {
+  font-size: 1.5rem;
+}
