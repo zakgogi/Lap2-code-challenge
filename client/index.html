@@ -20,7 +20,7 @@
         <form>
             <input id="articleTitle" type="text" placeholder="Input your post title here...">
             <input id="articlePseudonym" type="text" placeholder="Your pseudonym...">
-            <textarea id="articleBody" placeholder="Your post content..."></textarea>
+            <textarea id="articleBody" placeholder="Your post content..." rows="10"></textarea>
             
             <input id="giphyFinder" type="text" placeholder="Search for a gif!">
 
@@ -31,8 +31,11 @@
 
                 </section>
             </div>
-            <input id="submitBtn" type="submit" value="PUBLISH">
+            <input id="submitBtn" type="submit" value="PUBLISH" disabled="true">
         </form>
+        <button id="viewPosts">
+            View all posts
+        </button>
     </div>
 </body>
 </html>

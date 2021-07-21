@@ -4,13 +4,18 @@
 
 ### Installation
 
-- clone repo and navigate to folder.
-- run `docker compose up`.
+- Clone repo and navigate to folder.
+- Run `docker compose up`.
 
 ### Usage
 
-- visit [localhost:3000](http://localhost:3000/) to view server.
-- cd into client folder and run `http-server` or use live server extension to view client.
+- Visit [localhost:3000](http://localhost:3000/) to view server.
+- Cd into client folder and run `http-server` or use live server extension to view client.
+
+### Resetting
+
+- To reset server and preserve posts that have been inserted by the user, run `docker compose down`.
+- To completely teardown server and users posts, run `docker compose down --remove-orphans --volumes`.
 
 ## Server
 

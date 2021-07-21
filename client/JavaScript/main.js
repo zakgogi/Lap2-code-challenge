@@ -2,6 +2,26 @@ let submitButton = document.getElementById('submitBtn');
 submitButton.addEventListener('click', sendData);
 let giphyButton = document.getElementById('gifSearch');
 giphyButton.addEventListener('click', searchGif);
+let postTitle = document.getElementById('articleTitle');
+let postContent = document.getElementById('articleBody');
+let postPseudonym = document.getElementById('articlePseudonym');
+postTitle.addEventListener('change', enableButton);
+postContent.addEventListener('change', enableButton);
+postPseudonym.addEventListener('change', enableButton);
+let viewPostsButton = document.getElementById('viewPosts');
+viewPostsButton.addEventListener('click', navigateToPosts);
+
+function navigateToPosts(){
+    window.location.assign(`./show.html`);
+}
+
+function enableButton(){
+    if (postTitle.value && postContent.value && postPseudonym.value){
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }
+}
 
 const API_KEY = "MjgWi5LAv7OcAlh9hzV3qtIF8G9eb4o3";
 
