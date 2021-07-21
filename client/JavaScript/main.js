@@ -13,7 +13,7 @@ async function searchGif(e){
         let giphyAPIURL = `https://api.giphy.com/v1/gifs/search?q=${searchQuery}&rating=g&api_key=${API_KEY}&limit=15`;
         let fetchedData = await fetch(giphyAPIURL);
         let dataJson = await fetchedData.json();
-        console.log(dataJson)
+        console.log(dataJson);
         appendGifs(dataJson);
     } catch (error) {
         console.log(error)
