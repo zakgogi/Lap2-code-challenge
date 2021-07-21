@@ -22,6 +22,7 @@ function renderPosts(postArray){
         let cardDiv = document.createElement('div');
         cardDiv.classList.add('card');
         cardDiv.classList.add('pt-3');
+        cardDiv.classList.add('text-center');
         let cardHeader = document.createElement('div');
         cardHeader.classList.add('card-header');
         cardHeader.textContent = e.title;
@@ -32,10 +33,15 @@ function renderPosts(postArray){
         blockquote.classList.add('mb-0');
         let para = document.createElement('p');
         para.textContent = e.body;
+        let gif = document.createElement('img');
         let footer = document.createElement('footer');
         footer.classList.add('blockquote-footer');
         footer.textContent = e.pseudonym;
         blockquote.append(para);
+        if (e.gif){
+            gif.src = e.gif
+            blockquote.append(gif);
+        }
         blockquote.append(footer);
         cardBody.append(blockquote);
         cardDiv.append(cardHeader);
