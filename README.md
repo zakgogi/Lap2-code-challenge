@@ -1,30 +1,31 @@
-### Lap 2 Coding Challenge
+# Lap 2 Coding Challenge
 
 ## Installation and Usage
 
-# Installation
+### Installation
 
 - clone repo and navigate to folder.
 - run `docker compose up`.
 
-# Usage
+### Usage
 
 - visit [localhost:3000](http://localhost:3000/) to view server.
 - cd into client folder and run `http-server` or use live server extension to view client.
 
 ## Server
 
-# API
+### API
 
 - We went for a SQL server using postgre
 - Our only useful route on the backend is `/posts` to view all posts
 - `/posts` route has a get route to show and a post route to add a new post.
 
-# Database Schema
+### Database Schema
 
+| Datapoint | Datatype      | Required           |
 | --------- | ------------- | ------------------ |
-| id | | serial primary key |
-| pseudonym | varchar(255) | Not Null |
-| title | varchar(100) | Not Null |
-| body | varchar(1000) | Not Null |
-| gif | varchar(500) | |
+| id        | int           | Serial Primary Key |
+| pseudonym | varchar(255)  | Not Null           |
+| title     | varchar(100)  | Not Null           |
+| body      | varchar(1000) | Not Null           |
+| gif       | varchar(500)  | Can Be Null        |
