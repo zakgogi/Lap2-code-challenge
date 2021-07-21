@@ -22,6 +22,7 @@
 
 .selected {
   border: 2px solid rgb(102, 235, 102);
+  transform: scale(1.1);
 }
 
 body {

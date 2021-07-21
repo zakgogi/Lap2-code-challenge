@@ -7,11 +7,13 @@ const API_KEY = "MjgWi5LAv7OcAlh9hzV3qtIF8G9eb4o3";
 
 async function searchGif(e){
     e.preventDefault();
+    let searchQuery = document.getElementById('giphyFinder').value;
+    if (!searchQuery) return
     try {
-        let searchQuery = document.getElementById('giphyFinder').value;
         let giphyAPIURL = `https://api.giphy.com/v1/gifs/search?q=${searchQuery}&rating=g&api_key=${API_KEY}&limit=15`;
         let fetchedData = await fetch(giphyAPIURL);
         let dataJson = await fetchedData.json();
+        console.log(dataJson)
         appendGifs(dataJson);
     } catch (error) {
         console.log(error)
