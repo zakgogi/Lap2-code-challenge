@@ -23,7 +23,7 @@
 
 - We went for a SQL server using postgre
 - Our only useful route on the backend is `/posts` to view all posts
-- `/posts` route has a get route to show and a post route to add a new post.
+- `/posts` route has a get route to show posts and a post route to add a new post.
 
 ### Database Schema
 
